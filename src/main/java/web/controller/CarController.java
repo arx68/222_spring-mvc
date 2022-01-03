@@ -13,14 +13,14 @@ import java.util.List;
 @Controller
 public class CarController {
     @GetMapping("/cars")
-    public String cars(@RequestParam(defaultValue = "5") int count, Model model) {
+    public String cars(@RequestParam(defaultValue = "5") int cars, Model model) {
         List<Car> list = new ArrayList<>();
         list.add(new Car("Audi", "white", 10));
         list.add(new Car("Fiat", "grey", 20));
         list.add(new Car("Ford", "red", 30));
         list.add(new Car("Honda", "black", 40));
         list.add(new Car("Lada", "blue", 50));
-        model.addAttribute("count", CarService.carsCount(list, count));
+        model.addAttribute("count", CarService.carsCount(list, cars));
         return "cars";
     }
 }
