@@ -3,11 +3,11 @@ package web.model;
 public class Car {
     private String model;
     private String color;
-    private int number;
+    private String number;
 
     public Car() {}
 
-    public Car(String model, String color, int number) {
+    public Car(String model, String color, String number) {
         this.model = model;
         this.color = color;
         this.number = number;
@@ -38,11 +38,11 @@ public class Car {
         this.color = color;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }
